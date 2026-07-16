@@ -106,6 +106,7 @@ const SlideShow = () => {
     };
   }, [currentSlide, isFullscreen]);
   const CurrentSlideComponent = slides[currentSlide].component;
+  const logoSrc = `${import.meta.env.BASE_URL}beta-gouv-logo.png`;
   return <SidebarProvider defaultOpen={true}>
       <div className="h-screen flex w-full bg-background overflow-hidden">
         {!isFullscreen && <TrainingSidebar currentSlide={currentSlide} onSlideSelect={index => goToSlide(index, index > currentSlide ? "right" : "left")} />}
@@ -121,7 +122,7 @@ const SlideShow = () => {
                   </Button>
                 </SidebarTrigger>
                 <div className="h-12 flex items-center gap-3">
-                  <img src="/beta-gouv-logo.png" alt="beta.gouv.fr" className="h-full object-contain" />
+                  <img src={logoSrc} alt="beta.gouv.fr" className="h-full object-contain" />
                   <div className="flex items-center">
                     <span className="text-2xl font-bold text-foreground">BETA.</span>
                     <span className="text-2xl font-bold text-accent">GOUV.FR</span>
