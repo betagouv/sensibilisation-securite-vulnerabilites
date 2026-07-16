@@ -18,7 +18,7 @@ const Slide01IdentityCard = () => {
         cweLink: "https://cwe.mitre.org/data/definitions/89.html",
       }}
       stats={{
-        bugBountyCount: 0,
+        bugBountyCount: 1,
         bugBountyLabel: "Bug Bounty beta.gouv.fr",
         cveCount: 3653,
         cveYear: 2025,
